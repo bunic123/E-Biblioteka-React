@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react'
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useState } from 'react'
+import axios from 'axios'
 
-
-function Izmena() {
+function Dodaj() {
 
     const [knjiga, setKnjiga] = useState({
         naziv: '',
@@ -13,42 +11,23 @@ function Izmena() {
         kategorija: '',
     });
 
-    const urlParametri = useParams();
-
-    useEffect(() => {
-
-        axios.get(`http://localhost:8000/api/izmena/${urlParametri.id}`).then(res => {
-
-            setKnjiga({
-                ...knjiga,
-                naziv: res.data.knjiga.naziv,
-                opis: res.data.knjiga.opis,
-                pisac: res.data.knjiga.pisac,
-                cena: res.data.knjiga.cena,
-                kategorija: res.data.knjiga.kategorija,
-            });
-        });
-    }, []);
-
-
-
-    function azurirajKnjigu(e) {
+    function sacuvajKnjigu(e) {
 
         e.preventDefault();
 
-        axios.post(`http://localhost:8000/api/azuriraj/${urlParametri.id}`, knjiga).then(res => {
-            alert(res.data.poruka);
+        console.log(knjiga.naziv + " " + knjiga.opis + " " + knjiga.pisac + " " + knjiga.cena + " " + knjiga.kategorija + " ")
+
+        axios.post(`http://localhost:8000/api/sacuvaj`, knjiga).then(res => {
+            alert(res.data.poruka)
         });
     }
-
-
 
     return (
         <div>
 
             <div className='div-f'>
 
-                <form onSubmit={azurirajKnjigu}>
+                <form onSubmit={sacuvajKnjigu}>
 
                     <div className='el-frm'>
                         <label>Naziv knjige</label>
@@ -75,12 +54,13 @@ function Izmena() {
                         <input type="text" className="form-control" value={knjiga.kategorija} onChange={e => setKnjiga({ ...knjiga, kategorija: e.target.value })} />
                     </div>
 
-                    <button type="submit" id="s-bn" className="btn btn-primary mt-3">Sačuvaj izmene</button>
+                    <button type="submit" id="s-bn" className="btn btn-primary mt-3">Sacuvaj knjigu</button>
                 </form>
 
             </div>
+
         </div>
     )
 }
 
-export default Izmena;
+export default Dodaj;
