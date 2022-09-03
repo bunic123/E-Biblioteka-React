@@ -1,4 +1,7 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios';
+import { useParams } from 'react-router-dom';
+
 
 function Izmena() {
 
@@ -10,7 +13,23 @@ function Izmena() {
         kategorija: '',
     });
 
-    
+    const urlParametri = useParams();
+
+    useEffect(() => {
+
+        axios.get(`http://localhost:8000/api/izmena/${urlParametri.id}`).then(res => {
+
+            setKnjiga({
+                ...knjiga,
+                naziv: res.data.knjiga.naziv,
+                opis: res.data.knjiga.opis,
+                pisac: res.data.knjiga.pisac,
+                cena: res.data.knjiga.cena,
+                kategorija: res.data.knjiga.kategorija,
+            });
+        });
+    }, []);
+
 
 
     return (
