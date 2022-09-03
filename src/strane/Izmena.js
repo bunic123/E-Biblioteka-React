@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import NavMenu from '../komponente/NavMenu';
 
 
 function Izmena() {
@@ -45,6 +46,8 @@ function Izmena() {
 
     return (
         <div>
+
+            <NavMenu />
 
             <div className='div-f'>
 

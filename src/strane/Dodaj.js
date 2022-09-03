@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import NavMenu from '../komponente/NavMenu';
 
 function Dodaj() {
 
@@ -25,7 +26,10 @@ function Dodaj() {
     return (
         <div>
 
+            <NavMenu />
+
             <div className='div-f'>
+
 
                 <form onSubmit={sacuvajKnjigu}>
 

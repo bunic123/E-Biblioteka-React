@@ -41,3 +41,29 @@
   width: 250px;
   font-size: 20px;
 }
+
+#register-nm{
+  margin-top: 5px;
+  margin-left: 400px;
+  font-size: 30px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  border-bottom: 2px solid red;
+}
+
+#login-nm{
+   margin-top: 5px;
+   margin-left: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.nav-div{
+  width: 1000px;
+  margin-left: 500px;
+}
