@@ -1,8 +1,17 @@
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function Knjiga(props) {
 
     const knjiga = props.knjiga;
     const slika = props.slika;
+
+    function obrisiKnjigu(id) {
+
+        axios.delete(`http://localhost:8000/api/obrisi-knjigu/${id}`).then(res => {
+            alert(res.data.poruka)
+        });
+    }
 
     return (
         <div className="card text-center">
@@ -16,7 +25,10 @@ function Knjiga(props) {
                 <li className="list-group-item"><h5>{knjiga.cena}.00 RSD</h5></li>
                 <li className="list-group-item"><h6>{knjiga.kategorija}</h6></li>
             </ul>
-
+            <div className="card-body">
+                <Link to={`izmeni/${knjiga.id}`}><button className='btn btn-danger mx-2'>Edit</button></Link>
+                <button className='btn btn-danger' onClick={() => obrisiKnjigu(knjiga.id)}>Delete</button>
+            </div>
         </div>
     )
 
