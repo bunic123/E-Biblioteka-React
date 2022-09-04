@@ -55,6 +55,14 @@ nav {
   border-bottom: 2px solid red;
 }
 
+nav a {
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: black;
+}
+
 #login-nm{
    margin-top: 5px;
    margin-left: 20px;
