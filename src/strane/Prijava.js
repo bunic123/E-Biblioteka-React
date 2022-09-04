@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import NavMenu from '../komponente/NavMenu';
 
 function Prijava() {
 
@@ -35,6 +36,9 @@ function Prijava() {
 
     return (
         <div>
+
+            <NavMenu />
+
             <div className='div-f'>
 
                 <form onSubmit={prijava}>

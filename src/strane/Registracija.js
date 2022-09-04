@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
+import NavMenu from '../komponente/NavMenu';
 
 function Registracija() {
 
@@ -27,6 +28,8 @@ function Registracija() {
 
     return (
         <div>
+
+            <NavMenu />
 
             <div className='div-f'>
 

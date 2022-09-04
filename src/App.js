@@ -5,6 +5,7 @@ import Izmena from './strane/Izmena';
 import Dodaj from './strane/Dodaj';
 import Registracija from './strane/Registracija';
 import Prijava from './strane/Prijava';
+import Pretraga from './strane/Pretraga';
 
 
 
@@ -18,6 +19,8 @@ function App() {
           <Route path="dodaj" element={<Dodaj />} />
           <Route path="registracija" element={<Registracija />} />
           <Route path="prijava" element={<Prijava />} />
+          <Route path="pretraga" element={<Pretraga />} />
+          <Route path="pocetna" element={<Pocetna />} />
         </Routes>
       </Router>
     </div>
