@@ -9,7 +9,10 @@ function Pocetna() {
 
             <NavMenu />
 
-            <Link to="/dodaj"><button className="btn btn-danger" id="d-knjigu">Dodaj knjigu</button></Link>
+            {localStorage.getItem('admin') === 'da' ?
+                <Link to="/dodaj"><button className="btn btn-danger" id="d-knjigu">Dodaj knjigu</button></Link>
+                : ''}
+
 
             <SveKnjige />
         </div>

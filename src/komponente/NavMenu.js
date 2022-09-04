@@ -5,7 +5,7 @@ function NavMenu() {
         <div className="nav-div">
             <nav>
                 <Link to="/registracija"><li id="register-nm">Register</li></Link>
-                <li id="login-nm">Login</li>
+                <Link to="/prijava"><li id="login-nm">Login</li></Link>
             </nav>
         </div>
     )

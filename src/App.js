@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Izmena from './strane/Izmena';
 import Dodaj from './strane/Dodaj';
 import Registracija from './strane/Registracija';
+import Prijava from './strane/Prijava';
+
 
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
           <Route path="izmeni/:id" element={<Izmena />} />
           <Route path="dodaj" element={<Dodaj />} />
           <Route path="registracija" element={<Registracija />} />
+          <Route path="prijava" element={<Prijava />} />
         </Routes>
       </Router>
     </div>
