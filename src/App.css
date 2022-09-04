@@ -122,8 +122,28 @@ nav a:visited {
 
 #pocetna-nm{
    margin-top: 5px;
-   margin-left: 300px;
+   margin-left: 260px;
   font-size: 30px;
   text-decoration: none;
   list-style-type: none;
+}
+
+#lgt {
+  margin-top: 8px;
+  margin-left: 150px;
+  width: 180px;
+  height: 40px;
+}
+
+#src {
+  width: 350px;
+  margin-left: 10px;
+  margin-top: 53px;
+  margin-bottom: -65px;
+}
+
+#btn-s{
+  margin-left: 370px;
+  margin-top: 25px;
+  font-size: 18px;
 }
