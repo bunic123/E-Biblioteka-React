@@ -147,3 +147,26 @@ nav a:visited {
   margin-top: 25px;
   font-size: 18px;
 }
+
+.top-div {
+  display: flex;
+}
+
+.filt{
+  display: flex;
+  margin-top: 50px;
+}
+
+#btn-fil{
+  font-size: 18px;
+  width: 120px;
+  height: 40px;
+}
+
+#filter-select {
+  margin-left: 1050px;
+  width: 250px;
+  height: 40px;
+  margin-right: 10px;
+}
+
