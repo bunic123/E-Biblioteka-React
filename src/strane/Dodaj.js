@@ -16,7 +16,7 @@ function Dodaj() {
 
         e.preventDefault();
 
-        console.log(knjiga.naziv + " " + knjiga.opis + " " + knjiga.pisac + " " + knjiga.cena + " " + knjiga.kategorija + " ")
+        
 
         axios.post(`http://localhost:8000/api/sacuvaj`, knjiga).then(res => {
             alert(res.data.poruka)

@@ -28,7 +28,7 @@ function Knjiga(props) {
 
             {localStorage.getItem('admin') === 'da' ?
                 <div className="card-body">
-                    <Link to={`izmeni/${knjiga.id}`}><button className='btn btn-danger mx-2'>Edit</button></Link>
+                    <Link to={`/izmeni/${knjiga.id}`}><button className='btn btn-danger mx-2'>Edit</button></Link>
                     <button className='btn btn-danger' onClick={() => obrisiKnjigu(knjiga.id)}>Delete</button>
                 </div>
                 : ''}

@@ -6,7 +6,7 @@
 .knjige-div {
     display: grid;
     grid-template-columns: 350px 350px 350px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 650px 650px 650px;
     grid-row-gap: 150px;
     grid-column-gap: 300px;
     justify-content: center;
@@ -35,9 +35,9 @@
 }
 
 #d-knjigu{
-  margin-top: 50px;
-  margin-bottom: -70px;
-  margin-left: 50px;
+ 
+
+  margin-left: 30px;
   width: 250px;
   font-size: 20px;
 }
@@ -136,10 +136,10 @@ nav a:visited {
 }
 
 #src {
-  width: 350px;
-  margin-left: 10px;
-  margin-top: 53px;
-  margin-bottom: -65px;
+  
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: -10px;
 }
 
 #btn-s{
