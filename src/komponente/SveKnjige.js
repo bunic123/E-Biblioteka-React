@@ -52,12 +52,12 @@ function SveKnjige() {
                 </div>
                 <div className='filt'>
                     <select className='form-select' id='filter-select' onChange={handleSelect} value={selectValue}>
-                        <option>Filter by</option>
+                        <option>Sort by</option>
                         <option value="naziv">Naziv</option>
                         <option value="pisac">Pisac</option>
                         <option value="cena">Cena</option>
                     </select>
-                    <button onClick={filter} className='btn btn-danger' id='btn-fil'>Filter</button>
+                    <button onClick={filter} className='btn btn-danger' id='btn-fil'>Sort</button>
                 </div>
             </div>
 
